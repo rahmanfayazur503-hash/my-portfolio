@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="fayaz.css">
+
+</head>
+ 
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">MD FAYAZUR RAHMAN</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="MD FAYAZUR RAHMAN H.pdf">Resume</a></li>
+
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Fullstack Developer</h1>
+            <p>Building modern web applications with HTML, CSS, JavaScript & React</p>
+            <a href="#contact" class="cta-button" style="margin: 20px auto;">Get In Touch</a>
+            <div class="Resume">
+                <a href="MD FAYAZUR RAHMAN H.pdf" style="color: white; text-decoration: none;">Download CV</a>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Full Stack Developer</h3>
+                <p>Building responsive web apps with modern JS frameworks</p>
+                
+                <div class="skills">
+                    
+                    <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span
+                        class="skill-tag">JavaScript</span><span class="skill-tag">Bootstrap</span><SPan
+                        class="skill-tag">REACT</SPan><span class="skill-tag">DJANGO</span>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <img src="C:\Users\ADMIN\Pictures\Screenshots\fayaz.img.png" style="width: 250px;height: 250px;margin: 0 auto; border-radius: 50%;display: flex;align-items: center;justify-content: center;">
+            </div>
+        </div>
+    </section>
+    <section id="projects" style="background: #f8fafc;">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">Portfolio</div>
+                <div class="project-content">
+                    <h3>Personal Portfolio</h3>
+                    <p>This website you're viewing now!</p>
+
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">--</div>
+                <div class="project-content">
+                    <h3>--</h3>
+                    <p>--</p>
+
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's work together!</h3>
+                <div class="contact-item"><i class="fas fa-envelope"></i>
+                    <div><strong>Email</strong><br>rahmanfayazur503@email.com</div>
+                </div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
+                    <div><strong>Location</strong><br>Chennai</div>
+                </div>
+                 <div class="contact-item"><i class="fas fa-phone"></i>
+                    <div><strong>Phone</strong><br>7200239018</div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+                <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+                <div class="form-group"><textarea rows="5" placeholder="Your Message" required></textarea></div>
+                <button type="submit" class="submit-btn">Send </button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>© <span id="year"></span></p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger'), navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); navLinks.classList.remove('active'); }));
+        window.addEventListener('scroll', () => document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 100));
+        document.getElementById('contactForm').addEventListener('submit', function (e) { e.preventDefault(); alert('Thanks! I\'ll reply soon.'); this.reset(); });
+
+        let year = document.getElementById('year')
+        const temp = new Date().getFullYear()
+        year.innerText = temp
+    </script>
+
+
+</body>
+
+</html>
+
